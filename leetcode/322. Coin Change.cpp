@@ -9,7 +9,7 @@ class Solution {
 public:
     int coinChange(vector<int>& coins, int amount) 
     {
-        // Dynamic Programming (Bottom up approach)
+        // Dynamic Programming (Bottom up approach). Time complexity : O(S*n), Space Complexity O(S)
         
         // Initialize DP table and fill all elements in it with max value (amount +1)
         int dp[amount+1];
