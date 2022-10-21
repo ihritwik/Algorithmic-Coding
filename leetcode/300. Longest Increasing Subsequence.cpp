@@ -46,7 +46,7 @@ public:
             }
             else
             {
-                // Find the element in sub that is equal to or greater than nums[i]
+                // Find the element in sub that is equal to or greater than nums[index]
                 auto index_to_swap = find_element(sub, nums[index]);
                 // Replace this element in sub with nums[i]
                 sub[index_to_swap] = nums[index];
