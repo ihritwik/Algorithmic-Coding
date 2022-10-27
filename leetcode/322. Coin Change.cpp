@@ -35,7 +35,7 @@ public:
 
 // Approach 1: Recursive Greedy approach
 
-    // int helper_recursion(vector<int>& coins, int amount, int sz_real)
+    // int helper_recursion(vector<int>& coins, vector<int>& change, int amount, int sz_real)
 	// {
 	// 	//sort(coins.begin(), coins.end());
     //     //base case
@@ -52,14 +52,46 @@ public:
     //     }
     //     else if (amount>=coins[0]){
     //         int freq = amount/coins[sz_real-1]; 
-    //         //min_coins += freq;
+    //         if (freq>0){
+    //             for (int index=1; index<=freq; index++)
+    //             {
+    //                change.push_back(coins[0]);
+    //             }   
+    //         }
     //         amount = amount%coins[sz_real-1]; 
-    //         return (freq + helper_recursion(coins, amount, sz_real-1));   
+    //         return (freq + helper_recursion(coins, change, amount, sz_real-1));   
     //     }
     //     return 0;
 	// }
 
-    // int coinChange(vector<int>& coins, int amount) 
-    // {
-    //     return (helper_recursion(coins, amount, coins.size()));
+    // vector<int> coinChange(vector<int>& coins, int amount) 
+    // {   
+    //     vector<int> change;
+    //     int number_of_coins = helper_recursion(coins, change, amount, coins.size());
+    //     return change;
     // }
+
+
+    // Approach 3: Non-recursive algorithm
+
+    // int helper_recursion(vector<int>& coins, vector<int>& change, int amount, int sz_real)
+	// {
+    //     int minimum_coins=0;
+    //     while(amount!=0){
+    //         for(int index=0;index<coins.size();index++){
+    //             if (amount>coins[index])
+    //             {
+    //                 amount=amount-coins[index];
+    //                 minimum_coins++;
+    //             }
+    //         }
+    //     }
+    //     return minimum_coins;
+    // }
+
+    // int coinChange(vector<int>& coins, int amount) 
+    // {   
+    //     vector<int> change;
+    //     return helper_recursion(coins, change, amount, coins.size());
+    // }
+

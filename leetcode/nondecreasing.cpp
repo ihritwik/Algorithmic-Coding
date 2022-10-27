@@ -1,3 +1,9 @@
+#include <algorithm>
+#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
+#include <algorithm>
+using namespace std;
 int lengthOfLIS(vector<int>& nums) 
     {
         // Approach 2: Time Complexity = O(n*lg n)   

@@ -9,3 +9,6 @@ if __name__ == "__main__":
     points= [[3,3],[5,-1],[-2,4]]
     k = 2
     print(ob.kClosest(points, k))
+
+
+
